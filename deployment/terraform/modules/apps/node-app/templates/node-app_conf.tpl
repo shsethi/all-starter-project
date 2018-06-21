@@ -1,0 +1,1 @@
+kafka_endpoint:${kafka_endpoint}

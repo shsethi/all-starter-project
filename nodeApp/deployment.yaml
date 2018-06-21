@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-app-v1
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: node-app-v1
+    spec:
+      containers:
+      - name: node-app-v1
+        image: node-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000 # which port of container to expose
