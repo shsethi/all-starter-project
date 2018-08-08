@@ -1,12 +1,19 @@
 const http = require('http')
-const port = 3000
+const port = 8080
 
 
 
 const requestHandler = (request, response) => {
   var os = require( 'os' );
+  var result = 'Hello Node.js Server 2!'
   console.log(request.url)
-  response.end('Hello Node.js Server 2!')
+  if(request.url=="/isActive")
+  {
+     result="true";
+  }
+  response.end(result)
+
+
 }
 
 const server = http.createServer(requestHandler);

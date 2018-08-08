@@ -1,5 +1,17 @@
 
+## Building and running with just docker
+
+```bash
+
+docker build -t node-app .
+
+docker -d -p 8080:8080 node-app:latest
+
+```
+
 ## How to use local docker images with Minikube?
+
+
 
 
 #### Build inside kubernetes 
